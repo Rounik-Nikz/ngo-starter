@@ -25,7 +25,7 @@ include_once('tcpdf/tcpdf.php');
 	<style type="text/css">
 	body{
 	font-size:12px;
-	line-height:24px;
+	line-height:400px;
 	font-family:"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	color:#000;
 	}
@@ -36,9 +36,9 @@ include_once('tcpdf/tcpdf.php');
 	<table cellpadding="0" cellspacing="0" style="border:1px solid #ddc;width:100%;" id="content">
 	<table style="width:100%;" >
 	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr><td colspan="2" align="center"><h1><b>WE FOR YOU</b></h1></td></tr>
-	<tr><td colspan="2" align="center">PHONE NO.: +91 9082689552</td></tr>
-	<tr><td colspan="2" align="center"> MULUND (WEST), MUMBAI-80.</td></tr><br><br>
+	<tr><td colspan="2" align="center"><h1><b>Bring Bright Smile</b></h1></td></tr>
+	<tr><td colspan="2" align="center">PHONE NO.: +91 8969862809</td></tr>
+	<tr><td colspan="2" align="center"> Patna, Bihar-India.</td></tr><br><br>
 	<tr><td colspan="2"><b>NAME: </b>'.$_POST['name'].' </td></tr>
 	<tr><td colspan="2"><b>PHONE NO.: </b>'.$_POST['phone'].' </td></tr>
 	<tr><td colspan="2" align="right"><b>BILL DATE.: </b>'.date("d-m-Y").' </td></tr><br><br>

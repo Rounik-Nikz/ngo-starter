@@ -123,7 +123,7 @@ if (!isset($username)) {
         <!-- Account page navigation-->
         <div class="container-fluid menu">
             <nav class="navbar navbar-expand-lg my-navbar">
-                <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
+                <a class="navbar-brand " href="./donorpage.php"><img src="./images/website-favicon.png" height="150" width='150' alt="" loading="lazy"></a>
                 <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

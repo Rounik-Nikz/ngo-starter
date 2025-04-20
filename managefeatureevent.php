@@ -39,7 +39,7 @@
     }
 
     body {
-      backgroud: white;
+      background-color: white;
     }
 
     @media only screen and (max-width: 992px) {
@@ -82,7 +82,7 @@
 <body>
   <div class="container-fluid menu">
     <nav class="navbar navbar-expand-lg my-navbar">
-      <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
+      <a class="navbar-brand " href="./donations.php"><img src="./images/website-favicon.png" height="150" width='150' alt="" loading="lazy"></a>
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -134,6 +134,10 @@
         </h2>
         <div class="container" style="text-align:center">
         </div><br>
+        <div class="container" style="text-align:center">
+          <a href="addfeatureevent.php">
+            <buttton class="btn btn-primary">Add Featured Event</buttton>
+          </a><br>
         <table class="table table-hover ">
           <thead class="thead-light">
             <?php echo "<tr><th>Event Name</th><th>Event Date</th><th>Event Image</th><th>Event Description</th><th>Edit</th><th>Delete</th></tr>"; ?></thread>

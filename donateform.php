@@ -2,103 +2,298 @@
 <html lang="en">
 
 <head>
-  <!--meta tags-->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-
-  <!--page Title-->
-  <title>WE FOR YOU - DONATION FORM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Aahar - Bring Bright Smile Foundation</title>
+  
   <!-- Favicon-->
-  <link rel="icon" type="image" href="./images/website-favicon.png" sizes="192x192" />
-
-
-  <!--stylesheet link-->
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-
-  <!--animation (AOS - Animation on scroll) link-->
+  <link rel="icon" type="image" href="images/website-favicon.png" sizes="192x192" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #232323;
+      --secondary: #fbfe65;
+      --accent: #e53e3e;
+      --light: #ffffff;
+      --dark: #232323;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      padding-top: 80px; /* Added for fixed navbar */
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
 
+    /* EXACT NAVBAR STYLING FROM FRONT PAGE */
+    .my-navbar {
+      background-color: white;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 0.5rem 1rem;
+    }
+    
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--secondary);
+    }
+    
+    .navbar-brand span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-left: 10px;
+      color: var(--dark);
+    }
+    
+    .navbar-brand span span {
+      color: var(--secondary);
+    }
+    
+    .nav-link {
+      color: var(--dark) !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--secondary) !important;
+    }
+    
+    .nav-link.active {
+      color: var(--secondary) !important;
+      font-weight: 600;
+    }
+    
+    .custom-toggler {
+      border: none;
+      padding: 0.5rem;
+    }
+    
+    .custom-toggler:focus {
+      outline: none;
+    }
+    
+    .custom-toggler .navbar-toggler-icon {
+      background-image: none;
+      color: var(--dark);
+      font-size: 1.5rem;
+    }
 
-  <!-- custom add-ons -->
-  <link rel="stylesheet" type="text/css" href="add.css">
-  <script src="owl.carousel/owl.carousel.min.js"></script>
-  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="fontawesome/css/all.css">
+    /* DONATION FORM STYLING */
+    .donation-form-container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .donation-green-hr {
+      border: 0;
+      height: 2px;
+      background: var(--secondary);
+      width: 100px;
+      margin: 1rem auto;
+    }
+    
+    .form-control:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 0.2rem rgba(251, 254, 101, 0.25);
+    }
+    
+    .btn-donate {
+      background-color: var(--secondary);
+      color: var(--dark);
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-donate:hover {
+      background-color: #e9ec5a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
 
+    /* QR CODE SECTION */
+    .qr-section {
+      margin-top: 3rem;
+      padding: 2rem 0;
+    }
+    
+    .qr-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .qr-title {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-decoration: underline;
+      color: var(--dark);
+    }
+
+    /* FOOTER STYLING */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 3rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    .footer-logo {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-contact a {
+      color: #aaa;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-contact a:hover {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      text-align: center;
+      line-height: 40px;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--secondary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    /* BACK TO TOP BUTTON */
+    #topbtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      background-color: var(--secondary);
+      color: var(--dark);
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      display: none;
+      transition: all 0.3s ease;
+    }
+    
+    #topbtn:hover {
+      background-color: #e9ec5a;
+      transform: translateY(-3px);
+    }
+  </style>
 </head>
 
-
 <body>
-
-
-  <!--navigation bar-->
-  <div class="container-fluid menu">
-    <nav class="navbar navbar-expand-lg my-navbar">
-      <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
-      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <!-- NAVIGATION BAR (EXACT COPY FROM FRONT PAGE) -->
+  <nav class="navbar navbar-expand-lg my-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.php">
+        <img src="./images/website-favicon.png" alt="Logo">
+        <span>Bring <span>Bright Smile</span></span>
+      </a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <i class="fas fa-bars"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link " href="./index.php">Home</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./aboutus.php">About us</a>
+            <a class="nav-link" href="./aboutus.php">About us</a>
           </li>
           <li class="nav-item">
-            <a href="./events.php" class="nav-link">Events</a>
+            <a class="nav-link" href="./events.php">Events</a>
           </li>
           <li class="nav-item">
-            <a href="./internship.php" class="nav-link">Internship</a>
+            <a class="nav-link" href="./internship.php">Internship</a>
           </li>
           <li class="nav-item">
-            <a href="./vol.php" class="nav-link ">Volunteer</a>
+            <a class="nav-link" href="./vol.php">Volunteer</a>
           </li>
           <li class="nav-item">
-            <a href="./projectaahar.php" class="nav-link active">Project Aahar</a>
+            <a class="nav-link active" href="./projectaahar.php">Project Aahar</a>
           </li>
           <li class="nav-item">
-            <a href="./contactus.php" class="nav-link">Contact Us</a>
+            <a class="nav-link" href="./contactus.php">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a href="./login.php" class="nav-link">Login</a>
+            <a class="nav-link" href="./login.php">Login</a>
           </li>
         </ul>
       </div>
-    </nav>
-  </div>
-  </div>
-  <!--nav bar end-->
+    </div>
+  </nav>
 
-  <!--donation form text-->
-  <section class="bg-light donation mx-auto">
-    <div class="container my-1 bg-white">
-      <h4 class=" text-center pt-4">PROJECT AAHAR - DONATION FORM
-        <hr class="donation-green-hr">
-      </h4>
-      <div class="row my-3" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="200">
-        <div class='col'></div>
-        <div class="col ">
-          <form action="bill.php" name='donationform' method="post">
+  <!-- DONATION FORM SECTION -->
+  <div class="container">
+    <div class="donation-form-container" data-aos="fade-up">
+      <h2 class="text-center">PROJECT AAHAR - DONATION FORM</h2>
+      <div class="donation-green-hr"></div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form action="bill.php" name="donationform" method="post">
             <div class="form-group">
               <label for="name">Name</label>
-              <input class="form-control" type="text" name='name' pattern="[A-Za-z A-Za-z]+" title="Name should contain only letters." placeholder="Your Name..." required>
+              <input class="form-control" type="text" name="name" pattern="[A-Za-z A-Za-z]+" title="Name should contain only letters." placeholder="Your Name..." required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" class="form-control" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9-]+\.[a-z]{2,3}" name="email" placeholder="Your Email..." required>
             </div>
             <div class="form-group">
-              <label for="Phone">Phone</label>
-              <input type="tel" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}" title="Only 10 Numbers are allowed." name='phone' class="form-control" placeholder="Your Phone Number..." required>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}" title="Only 10 Numbers are allowed." class="form-control" placeholder="Your Phone Number..." required>
             </div>
             <div class="form-group">
               <label for="donation-option">No. of Packets want to pay for</label>
@@ -113,101 +308,106 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="amount">Amount</label>
-              <input class="form-control" type="text" name="amount" id="amount" name='name' pattern=[0-9]+ title="Amount should be in numbers" required>
+              <label for="amount">Amount (₹)</label>
+              <input class="form-control" type="text" name="amount" id="amount" pattern="[0-9]+" title="Amount should be in numbers" required>
             </div>
-            <button type="submit" name="submit" target="_blank" class="btn btn-outline-success btn-lg mt-2 ">Submit</button>
+            <div class="text-center mt-4">
+              <button type="submit" name="submit" class="btn btn-donate">Submit</button>
+            </div>
           </form>
-          <hr>
-        </div>
-        <div class='col'></div>
-      </div>
-      <h3 class="text-center my-4">Our each Packet cost for ₹.50, so pay in factor of ₹.50</h3>
-      <div class="row text-center my-4 pb-5 ">
-
-        <div class="col border-right" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="200">
-          <p style="text-decoration: underline; font-weight: bold; font-size: larger;">Scan this to pay via Paytm</p>
-          <img src="./images/donation_images/paytm-payment-gateway.jpg" class="pr-5" alt="paytm Qr code" width="350" height="250">
-        </div>
-        <div class="col px-auto" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="200">
-          <p style="text-decoration: underline; font-weight: bold; font-size: larger;">Scan this to pay via Google Pay</p>
-          <img src="./images/donation_images/google-pay-payment-gateway1.jpg" class="pr-5" alt="Googlepay Qr code" width="350" height="350">
         </div>
       </div>
     </div>
 
-  </section>
-  <!-- donation form end-->
-
-
-  <!--footer-->
-  <footer id="footer">
-    <div class="footer-top pb-4">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 footer-contact" style="height:200px">
-            <img src="./images/logo.jpg" height="85%">
+    <div class="qr-section">
+      <h3 class="text-center mb-4">Our each Packet costs ₹50, so pay in multiples of ₹50</h3>
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <div class="qr-card">
+            <h4 class="qr-title">Pay via Paytm</h4>
+            <img src="./images/donation_images/paytm-payment-gateway.jpg" alt="Paytm QR code" class="img-fluid" style="max-height: 300px;">
           </div>
-          <div class="col-lg-4 col-md-6 footer-contact" style="height: 200px">
-            <h3 style="color: #009970"><b>We For You</b></h3>
-            <p><a href="https://goo.gl/maps/KQ1NrWw3Bs63noTP9" target="_blank" style="color: #777777;">
-                Woodland Park, Block C<br>
-                Siddharth Nagar, Mulund West<br>
-                Mumbai, 400080</a><br><br>
-
-              <strong>Phone:</strong> <a href="tel:+919082689552" style="color: #777777;">+919082689552</a><br>
-
-              <strong>Email:</strong> <a href="mailto:neha71549@gmail.com" style="color: #777777;">weforyou@gmail.com</a><br>
-            </p>
-          </div>
-          <div class="col-lg-4 pt-4 mt-2">
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-              <a href="https://twitter.com/nehaa_2602_?t=ODUJLtg2wcFehM0gqk-E1w&s=08" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/Neha%20Gupta/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-              <a href="https://instagram.com/weforyou26?igshid=ZDdkNTZiNTM=" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCJs3CwS0-UIsYlDkw8TsO0g" class="google-plus" target="_blank"><i class="bx bxl-youtube"></i></a>
-              <a href="https://www.linkedin.com/company/the-rising-people-welfare-society/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            </div>
+        </div>
+        <div class="col-md-6 mb-4" data-aos="fade-left">
+          <div class="qr-card">
+            <h4 class="qr-title">Pay via Google Pay</h4>
+            <img src="./images/donation_images/google-pay-payment-gateway1.jpg" alt="Google Pay QR code" class="img-fluid" style="max-height: 300px;">
           </div>
         </div>
       </div>
     </div>
+  </div>
 
+  <!-------------------------------- FOOTER ------------------------------------------>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 text-center text-md-left">
+          <img src="./images/website-favicon.png" class="footer-logo">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5>Contact Us</h5>
+          <p class="footer-contact">
+            <a href="https://maps.app.goo.gl/fZkQtg7iQaFNppAcA" target="_blank">
+              Kankarbagh, Patna, 800001
+            </a><br>
+            <strong>Phone:</strong> <a href="tel:+918969862809">+91 8969862809</a><br>
+            <strong>Email:</strong> <a href="mailto:info@bigsmile.in">info@bigsmile.in</a>
+          </p>
+        </div>
+        <div class="col-lg-4 text-center text-md-right">
+          <h5>Follow Us</h5>
+          <div class="social-links">
+            <a href="https://www.facebook.com/aryanschoolhjp/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/bringbrightsmilefoundation/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr style="background-color: rgba(255,255,255,0.1);">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0">&copy; 2023 Bring Bright Smile Foundation. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
   </footer>
-  <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!-- BACK TO TOP BUTTON -->
+  <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up"></i></button>
 
-  <!-- navbar animation -->
+  <!-- jQuery, Popper.js, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 60) {
-          $('.my-navbar').addClass('navbar-scroll');
-        } else {
-          $('.my-navbar').removeClass('navbar-scroll');
-        }
-      });
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
     });
-  </script>
-  <!--back to top btn-->
-  <script type="text/javascript">
-    myButton = document.getElementById("topbtn");
+
+    // Navbar scroll effect
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 50) {
+        $('.navbar').addClass('navbar-scroll');
+      } else {
+        $('.navbar').removeClass('navbar-scroll');
+      }
+    });
+
+    // Back to top button
     window.onscroll = function() {
-      scrollfunction()
+      scrollFunction()
     };
 
-    function scrollfunction() {
+    function scrollFunction() {
       if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        myButton.style.display = "Block";
+        document.getElementById("topbtn").style.display = "block";
       } else {
-        myButton.style.display = "none";
+        document.getElementById("topbtn").style.display = "none";
       }
     }
 
@@ -215,15 +415,8 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-  </script>
 
-  <!--Animation on scroll (Aos) link and script-->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <script>
+    // Set amount based on packet selection
     function setAmount() {
       var select = document.getElementById("donation-option");
       var amountInput = document.getElementById("amount");
@@ -231,10 +424,9 @@
       if (select.value == "More than 5 Packets") {
         amountInput.value = amountInput.value.trim();
         if (amountInput.value == "00" | "50" | "100" | "150" | "200" | "250") {
-          amountInput.value = "1000"; // Default to 1000 if no value entered
+          amountInput.value = "1000";
         }
       } else {
-        // Option selected, set amount based on option
         if (select.value == "1 Packet") {
           amountInput.value = "50";
         } else if (select.value == "2 Packets") {
@@ -251,41 +443,5 @@
       }
     }
   </script>
-<script>
-  $(document).ready(function() {
-  // Refresh the page when navigating back
-  $(window).on('popstate', function(e) {
-    location.reload(true);
-  });
-
-  // Dismiss content when returning to the page
-  $(window).on('load', function() {
-    if (performance && performance.navigation.type === 2) {
-      dismissPreviousContent();
-    }
-  });
-
-  // Function to dismiss the previous content
-  function dismissPreviousContent() {
-    // Perform an AJAX request to clear the content
-    $.ajax({
-      url: 'http://localhost/Project1/bill.php', // Replace with your server-side script or endpoint
-      type: 'POST',
-      success: function(response) {
-        // Handle the response or perform any necessary UI updates
-        console.log('Previous content dismissed');
-      },
-      error: function(xhr, status, error) {
-        // Handle the error if AJAX request fails
-        console.error('Error dismissing previous content:', error);
-      }
-    });
-  }
-});
-
-</script>
-
-
 </body>
-
 </html>

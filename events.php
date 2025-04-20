@@ -3,82 +3,227 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-
-  <!--aos link-->
-  <link rel="stylesheet" type="text/css" href="aos/aos.css">
-
-  <title>WE FOR YOU - EVENTS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bring Bright Smile - Events</title>
+  
   <!-- Favicon-->
   <link rel="icon" type="image" href="./images/website-favicon.png" sizes="192x192" />
-
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- custom add-ons -->
-  <link rel="stylesheet" type="text/css" href="add.css">
-  <script src="owl.carousel/owl.carousel.min.js"></script>
-  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="fontawesome/css/all.css">
-
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    :root {
+      --primary: #232323;
+      --secondary: #fbfe65;
+      --accent: #e53e3e;
+      --light: #ffffff;
+      --dark: #232323;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Custom animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Custom button styles */
+    .btn-primary {
+      background-color: var(--secondary);
+      color: var(--dark);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #e9ec5a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .btn-outline {
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--secondary);
+      color: var(--dark);
+    }
+    
+    /* Custom background colors */
+    .bg-primary {
+      background-color: var(--primary);
+    }
+    
+    .bg-secondary {
+      background-color: var(--secondary);
+    }
+    
+    .bg-light {
+      background-color: var(--light);
+    }
+    
+    /* Text colors */
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .text-secondary {
+      color: var(--secondary);
+    }
+    
+    /* Event card styles */
+    .event-card {
+      transition: all 0.3s ease;
+      border-bottom: 4px solid transparent;
+    }
+    
+    .event-card:hover {
+      transform: translateY(-5px);
+      border-bottom: 4px solid var(--secondary);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Custom hr styles */
+    .divider {
+      height: 3px;
+      width: 80px;
+      background: var(--secondary);
+      margin: 15px auto;
+    }
+    
+    /* Hero overlay */
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(35,35,35,0.9), rgba(35,35,35,0.7));
+    }
+    
+    /* Date badge */
+    .date-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: var(--secondary);
+      color: var(--dark);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-white">
+  <!------ Navigation ------>
+  <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+    <nav class="bg-white shadow-lg">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a class="navbar-brand" href="./index.php">
+              <img src="./images/website-favicon.png" class="h-16 w-16 rounded-full border-2 border-secondary" alt="Logo">
+            </a>
+            <span class="ml-3 text-xl font-bold text-dark">Bring <span class="text-secondary">Bright Smile</span></span>
+          </div>
 
-  <!------navigation------->
-  <div class="container-fluid menu">
-    <nav class="navbar navbar-expand-lg my-navbar">
-      <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
-      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <!-- Mobile menu button -->
+          <div class="flex md:hidden">
+            <button type="button" class="text-dark hover:text-secondary focus:outline-none" id="menu-toggle">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link " href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="aboutus.php">About us</a>
-          </li>
-          <li class="nav-item">
-            <a href="events.php" class="nav-link active">Events</a>
-          </li>
-          <li class="nav-item">
-            <a href="internship.php" class="nav-link">Internship</a>
-          </li>
-          <li class="nav-item">
-            <a href="vol.php" class="nav-link ">Volunteer</a>
-          </li>
-          <li class="nav-item">
-            <a href="projectaahar.php" class="nav-link">Project Aahar</a>
-          </li>
-          <li class="nav-item">
-            <a href="contactus.php" class="nav-link">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="login.php" class="nav-link">Login</a>
-          </li>
-        </ul>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="./index.php" class="text-gray-600 hover:text-secondary transition">Home</a>
+            <a href="./aboutus.php" class="text-gray-600 hover:text-secondary transition">About us</a>
+            <a href="./events.php" class="text-secondary font-medium">Events</a>
+            <a href="./internship.php" class="text-gray-600 hover:text-secondary transition">Internship</a>
+            <a href="./vol.php" class="text-gray-600 hover:text-secondary transition">Volunteer</a>
+            <a href="./projectaahar.php" class="text-gray-600 hover:text-secondary transition">Project Aahar</a>
+            <a href="./contactus.php" class="text-gray-600 hover:text-secondary transition">Contact Us</a>
+            <a href="./login.php" class="btn-primary px-4 py-2 rounded-lg font-medium">Login</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden mt-4 pb-3" id="mobile-menu">
+          <a href="./index.php" class="block py-2 text-gray-600 hover:text-secondary">Home</a>
+          <a href="./aboutus.php" class="block py-2 text-gray-600 hover:text-secondary">About us</a>
+          <a href="./events.php" class="block py-2 text-secondary font-medium">Events</a>
+          <a href="./internship.php" class="block py-2 text-gray-600 hover:text-secondary">Internship</a>
+          <a href="./vol.php" class="block py-2 text-gray-600 hover:text-secondary">Volunteer</a>
+          <a href="./projectaahar.php" class="block py-2 text-gray-600 hover:text-secondary">Project Aahar</a>
+          <a href="./contactus.php" class="block py-2 text-gray-600 hover:text-secondary">Contact Us</a>
+          <a href="./login.php" class="block py-2 text-secondary font-medium">Login</a>
+        </div>
       </div>
     </nav>
-  </div>
-  <!------end_navigation-->
-  <!---main_body-->
-  <section>
-    <div class="container py-4 my-4 bg-light" style="box-shadow: 5px 5px 5px 5px #777;">
-      <div class="about text-center">
-        <h2 class="mb-5">EVENTS
-          <hr class="green-hr">
-        </h2>
+  </header>
+
+  <!-------------------------------- Hero Banner --------------------------------------->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">Our Events</h1>
+        <div class="divider" data-aos="fade-up" data-aos-delay="100"></div>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          Discover our upcoming and past events that bring smiles to underprivileged children
+        </p>
       </div>
-      <hr>
-      <!--feature event-->
+    </div>
+  </section>
+
+  <!-------------------------------- Events Section ---------------------------------------->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="zoom-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Featured Events</h2>
+        <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Highlighting our most impactful initiatives and programs
+        </p>
+      </div>
+      
+      <!-- Featured Events from PHP -->
       <?php
       $conn = mysqli_connect("localhost", "root", "", "ngo");
-
       $sql = "SELECT * FROM featureevent";
       $result = mysqli_query($conn, $sql);
 
@@ -86,35 +231,49 @@
         while ($row1 = mysqli_fetch_assoc($result)) {
           $feid = $row1['id'];
           $date = date("d F, Y", strtotime($row1['date']));
-          $desc = $row1['description'];
           $maxCharacters = 300;
-          if (strlen($row1['description']) > $maxCharacters) {
-            $shortenedValue = substr($row1['description'], 0, $maxCharacters) . '...';
-          } else {
-            $shortenedValue = $row1['description'];
-          }
-
+          $shortenedValue = (strlen($row1['description']) > $maxCharacters) ? 
+                           substr($row1['description'], 0, $maxCharacters) . '...' : 
+                           $row1['description'];
       ?>
-          <div class="row justify-content-start" style="background-color:seashell">
-            <div class="col-md-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <?php echo "<img src='" . $row1['image'] . "' class='img-fluid';>" ?>
+      <div class="bg-gray-50 rounded-xl p-6 mb-12 event-card" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-5/12 mb-6 md:mb-0 relative">
+            <?php echo "<img src='" . $row1['image'] . "' class='w-full h-64 object-cover rounded-lg shadow-md'>"; ?>
+            <div class="date-badge"><?php echo $date; ?></div>
+          </div>
+          <div class="md:w-7/12 md:pl-8">
+            <h2 class="text-2xl font-bold text-dark mb-2"><?php echo $row1['name']; ?></h2>
+            <div class="flex items-center text-gray-500 mb-4">
+              <span class="mr-4"><i class="fas fa-tag mr-1"></i> Uncategorized</span>
+              <span><i class="fas fa-user mr-1"></i> By Bring Bright Smile</span>
             </div>
-            <div class="col-md-7 pt-4" data-aos="fade-left">
-              <h2><?php echo "$row1[name]"; ?></h2>
-              <h4><b><a href="#">Uncategorized </a> / <a href="#"> By WeForYou </a></b></h4>
-              <h6><b><?php echo "$date"; ?></b></h6>
-              <p class="font-italic">
-                <?php echo "$shortenedValue"; ?>
-              </p>
-              <?php echo "<a href='myfeatureevent.php?id=$feid'><button class='btn btn-primary'>Read More »</button></a>"; ?>
+            <p class="text-gray-600 mb-6"><?php echo $shortenedValue; ?></p>
+            <div class="flex justify-between items-center">
+              <a href="<?php echo 'myfeatureevent.php?id='.$feid; ?>" class="btn-primary px-6 py-2 rounded-lg font-medium">Read More</a>
+              <div class="flex space-x-2">
+                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Education</span>
+                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Children</span>
+              </div>
             </div>
           </div>
-          <hr>
-      <?php mysqli_close($conn);
+        </div>
+      </div>
+      <?php 
         }
-      } ?>
+        mysqli_close($conn);
+      } 
+      ?>
 
-      <!--event-->
+      <div class="text-center mb-16 mt-20" data-aos="zoom-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">All Events</h2>
+        <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our ongoing efforts to make a difference in children's lives
+        </p>
+      </div>
+      
+      <!-- Regular Events from PHP -->
       <?php
       include '_dbconnect.php';
       $sql1 = "SELECT * FROM event order by date";
@@ -124,121 +283,180 @@
         while ($row = mysqli_fetch_assoc($result1)) {
           $eid = $row['id'];
           $date = date("d F, Y", strtotime($row['date']));
-          $desc1 = $row['description'];
           $maxCharacters1 = 300;
-          if (strlen($row['description']) > $maxCharacters1) {
-            $shortenedValue1 = substr($row['description'], 0, $maxCharacters1) . '...';
-          } else {
-            $shortenedValue1 = $row['description'];
-          }
+          $shortenedValue1 = (strlen($row['description']) > $maxCharacters1) ? 
+                            substr($row['description'], 0, $maxCharacters1) . '...' : 
+                            $row['description'];
       ?>
-
-          <div class="row justify-content-start">
-            <div class="col-md-5" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <?php echo "<img src='" . $row['image'] . "' class='img-fluid';>" ?>
+      <div class="bg-gray-50 rounded-xl p-6 mb-12 event-card" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-5/12 mb-6 md:mb-0 relative">
+            <?php echo "<img src='" . $row['image'] . "' class='w-full h-64 object-cover rounded-lg shadow-md'>"; ?>
+            <div class="date-badge"><?php echo $date; ?></div>
+          </div>
+          <div class="md:w-7/12 md:pl-8">
+            <h2 class="text-2xl font-bold text-dark mb-2"><?php echo $row['name']; ?></h2>
+            <div class="flex items-center text-gray-500 mb-4">
+              <span class="mr-4"><i class="fas fa-tag mr-1"></i> Uncategorized</span>
+              <span><i class="fas fa-user mr-1"></i> By Bring Bright Smile</span>
             </div>
-            <div class="col-md-7 pt-4" data-aos="fade-left">
-              <h2><?php echo "$row[name]"; ?></h2>
-              <h4><b><a href="#">Uncategorized </a> / <a href="#"> By WeForYou </a></b></h4>
-              <h6><b><?php echo "$date"; ?></b></h6>
-              <p class="font-italic">
-                <?php echo "$shortenedValue1"; ?>
-              </p>
-              <?php echo "<a href='myevent.php?id=$eid'><button class='btn btn-primary'>Read More »</button></a>"; ?>
-            </div>
-          </div>
-          <hr>
-      <?php }
-      } ?>
-
-    </div>
-  </section>
-  <!--main_body_end-->
-  <!---------footer---------->
-
-  <footer id="footer">
-    <div class="footer-top pb-4">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 footer-contact" style="height:200px">
-            <img src="./images/logo.jpg" height="85%">
-          </div>
-          <div class="col-lg-4 col-md-6 footer-contact" style="height: 200px">
-            <h3 style="color: #009970"><b>We For You</b></h3>
-            <p><a href="https://goo.gl/maps/KQ1NrWw3Bs63noTP9" target="_blank" style="color: #777777;">
-                Woodland Park, Block C<br>
-                Siddharth Nagar, Mulund West<br>
-                Mumbai, 400080</a><br><br>
-
-              <strong>Phone:</strong> <a href="tel:+919082689552" style="color: #777777;">+919082689552</a><br>
-
-              <strong>Email:</strong> <a href="mailto:neha71549@gmail.com" style="color: #777777;">weforyou@gmail.com</a><br>
-            </p>
-          </div>
-          <div class="col-lg-4 pt-4 mt-2">
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-              <a href="https://twitter.com/MrRahulXR?t=begnBiAb16DhhK29Dizdaw&s=08" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/Neha%20Gupta/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-              <a href="https://instagram.com/weforyou26?igshid=ZDdkNTZiNTM=" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCJs3CwS0-UIsYlDkw8TsO0g" class="google-plus" target="_blank"><i class="bx bxl-youtube"></i></a>
-              <a href="https://www.linkedin.com/in/mrrahul-rajpurohit-a71123222" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            <p class="text-gray-600 mb-6"><?php echo $shortenedValue1; ?></p>
+            <div class="flex justify-between items-center">
+              <a href="<?php echo 'myevent.php?id='.$eid; ?>" class="btn-primary px-6 py-2 rounded-lg font-medium">Read More</a>
+              <div class="flex space-x-2">
+                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Community</span>
+                <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">Support</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-  </footer>
-  <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
-
-
-  <!-- navbar animation -->
-  <script>
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 60) {
-          $('.my-navbar').addClass('navbar-scroll');
-        } else {
-          $('.my-navbar').removeClass('navbar-scroll');
+      <?php 
         }
+      } 
+      ?>
+    </div>
+  </section>
+
+  <!-------------------------------- CTA Section ---------------------------------------->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Want to Participate?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Join our upcoming events as a volunteer or sponsor to help bring more bright smiles
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="./vol.php" class="bg-secondary text-dark px-8 py-3 rounded-lg font-medium hover:bg-yellow-400 transition shadow-lg">Become a Volunteer</a>
+        <a href="./contactus.php" class="btn-outline px-8 py-3 rounded-lg font-medium shadow-lg">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-------------------------------- Footer ------------------------------------------>
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Logo and About -->
+        <div class="flex flex-col items-center md:items-start" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <img src="./images/website-favicon.png" class="h-16 w-16 rounded-full border-2 border-secondary" alt="Logo">
+            <span class="ml-3 text-xl font-bold">Bring <span class="text-secondary">Bright Smile</span></span>
+          </div>
+          <p class="text-gray-400 text-center md:text-left mb-6">
+            Empowering underprivileged children through education, nutrition, and care to build a brighter future for our community.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/aryanschoolhjp/" class="text-gray-400 hover:text-white text-xl" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/bringbrightsmilefoundation/" class="text-gray-400 hover:text-white text-xl" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-6 text-secondary">Contact Us</h3>
+          <div class="space-y-4">
+            <div class="flex items-start justify-center md:justify-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+              <a href="https://maps.app.goo.gl/fZkQtg7iQaFNppAcA" target="_blank" class="text-gray-400 hover:text-white">
+                Kankarbagh, Patna, 800001
+              </a>
+            </div>
+            <div class="flex items-center justify-center md:justify-start">
+              <i class="fas fa-phone-alt mr-3 text-secondary"></i>
+              <a href="tel:+918969862809" class="text-gray-400 hover:text-white">+91 8969862809</a>
+            </div>
+            <div class="flex items-center justify-center md:justify-start">
+              <i class="fas fa-envelope mr-3 text-secondary"></i>
+              <a href="mailto:info@bigsmile.in" class="text-gray-400 hover:text-white">info@bigsmile.in</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-6 text-secondary">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="./index.php" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="./aboutus.php" class="text-gray-400 hover:text-white transition">About Us</a></li>
+            <li><a href="./events.php" class="text-gray-400 hover:text-white transition">Events</a></li>
+            <li><a href="./internship.php" class="text-gray-400 hover:text-white transition">Internship</a></li>
+            <li><a href="./vol.php" class="text-gray-400 hover:text-white transition">Volunteer</a></li>
+            <li><a href="./projectaahar.php" class="text-gray-400 hover:text-white transition">Project Aahar</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400" data-aos="fade-up">
+        <p>&copy; 2023 Bring Bright Smile Foundation. All Rights Reserved.</p>
+        <div class="mt-2">
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a> | 
+          <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="topbtn" class="fixed bottom-8 right-8 bg-secondary text-dark w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-400 transition opacity-0 invisible">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('shadow-md', 'bg-opacity-90');
+      } else {
+        navbar.classList.remove('shadow-md', 'bg-opacity-90');
+      }
+    });
+    
+    // Back to top button
+    const topButton = document.getElementById('topbtn');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        topButton.classList.remove('opacity-0', 'invisible');
+        topButton.classList.add('opacity-100', 'visible');
+      } else {
+        topButton.classList.add('opacity-0', 'invisible');
+        topButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    topButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
     });
   </script>
-  <script type="text/javascript">
-    myButton = document.getElementById("topbtn");
-    window.onscroll = function() {
-      scrollfunction()
-    };
-
-    function scrollfunction() {
-      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        myButton.style.display = "Block";
-      } else {
-        myButton.style.display = "none";
-      }
-    }
-
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-
-
-  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <script src="aos/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
-
 </html>

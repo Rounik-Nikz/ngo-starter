@@ -18,7 +18,11 @@ if (!isset($username)) {
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Font Awesome CDN (for version 5.x) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+  <!-- Boxicons CDN -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!--page Title-->
   <title>DONATION FORM</title>
@@ -49,7 +53,7 @@ if (!isset($username)) {
   <!--navigation bar-->
   <div class="container-fluid menu">
     <nav class="navbar navbar-expand-lg my-navbar">
-      <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
+      <a class="navbar-brand " href="./donorpage.php"><img src="./images/website-favicon.png" height="150" width='150' alt="" loading="lazy"></a>
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

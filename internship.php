@@ -2,243 +2,343 @@
 <html lang="en">
 
 <head>
-  <!--meta tags-->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-
-  <!--page Title-->
-  <title>WE FOR YOU - INTERNSHIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bring Bright Smile - Internship</title>
+  
   <!-- Favicon-->
   <link rel="icon" type="image" href="./images/website-favicon.png" sizes="192x192" />
-
-
-  <!--stylesheet link-->
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-
-  <!--animation (AOS - Animation on scroll) link-->
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-  <!-- custom add-ons -->
-  <link rel="stylesheet" type="text/css" href="add.css">
-  <script src="owl.carousel/owl.carousel.min.js"></script>
-  <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="fontawesome/css/all.css">
-
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <style>
+    :root {
+      --primary: #232323;
+      --secondary: #fbfe65;
+      --accent: #e53e3e;
+      --light: #ffffff;
+      --dark: #232323;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      color: #333;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Logo sizing */
+    .navbar-brand img {
+      height: 50px;
+      width: 50px;
+    }
+    
+    /* Navigation */
+    .navbar {
+      padding: 10px 0;
+    }
+    
+    .nav-link {
+      font-size: 1rem;
+      padding: 8px 15px !important;
+    }
+    
+    /* Hero section */
+    .hero-section {
+      padding: 100px 0;
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .divider {
+      height: 3px;
+      width: 80px;
+      background: var(--secondary);
+      margin: 0 auto 20px;
+    }
+    
+    /* Form container */
+    .form-container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Form elements */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-control {
+      height: 45px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    
+    textarea.form-control {
+      height: auto;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 0 20px;
+    }
+    
+    .footer-logo img {
+      width: 60px;
+      height: 60px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .form-container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-  <!--navigation bar-->
-  <div class="container-fluid menu">
-    <nav class="navbar navbar-expand-lg my-navbar">
-      <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
-      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="./index.php">
+        <img src="./images/website-favicon.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link " href="./index.php">Home</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./aboutus.php">About us</a>
+            <a class="nav-link" href="./aboutus.php">About us</a>
           </li>
           <li class="nav-item">
-            <a href="./events.php" class="nav-link">Events</a>
+            <a class="nav-link" href="./events.php">Events</a>
           </li>
           <li class="nav-item">
-            <a href="./internship.php" class="nav-link active">Internship</a>
+            <a class="nav-link active" href="./internship.php">Internship</a>
           </li>
           <li class="nav-item">
-            <a href="./vol.php" class="nav-link ">Volunteer</a>
+            <a class="nav-link" href="./vol.php">Volunteer</a>
           </li>
           <li class="nav-item">
-            <a href="./projectaahar.php" class="nav-link">Project Aahar</a>
+            <a class="nav-link" href="./projectaahar.php">Project Aahar</a>
           </li>
           <li class="nav-item">
-            <a href="./contactus.php" class="nav-link">Contact Us</a>
+            <a class="nav-link" href="./contactus.php">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a href="./login.php" class="nav-link">Login</a>
+            <a class="nav-link" href="./login.php">Login</a>
           </li>
         </ul>
       </div>
-    </nav>
-  </div>
-  <!--nav bar end-->
+    </div>
+  </nav>
 
-  <!--cover image-->
-  <div class="internship-head text-center py-4 mt-5" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="200">
-    <h2>GET INVOLVED
-      <hr class="internship-green-hr">
-    </h2>
-    <p>We provide opportunity for volunteering and internship at our NGO WeForYou. <br>
-      Anyone irrespective of age, gender, race, colour, country can apply for internships in various fields at our NGO.
-    </p>
-    <h3>Apply here for internships <i class="fa fa-arrow-down "></i>
-      <hr class="internship-green-hr">
-    </h3>
-  </div>
-  <!--cover image end-->
-  <section style="background-color: aliceblue;">
+  <!-- Hero Section -->
+  <section class="hero-section">
     <div class="container">
-      <div class="row ">
-        <div class="col"></div>
-        <div class="col internship" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="200">
-          <h2>Internship Form
-            <hr class="internship-green-hr">
-          </h2>
-          <form action="#" name='internshipform' id="internshipform" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input class="form-control" pattern="[A-Za-z A-Za-z]+" title="Name should contain only letters." type="text" name='name' placeholder="Your Name..." required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9-]+\.[a-z]{2,3}" placeholder="Your Email..." required>
-            </div>
-            <div class="form-group">
-              <label for="Phone">Phone</label>
-              <input type="tel" id="phone" name="phone" class="form-control" maxlength="10" pattern="[0-9]{10}" title="Only 10 Numbers are allowed." placeholder="Your Phone Number..." required>
-            </div>
+      <h1 class="hero-title" data-aos="fade-up">Internship Program</h1>
+      <div class="divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">
+        Gain valuable experience while making a difference in children's lives
+      </p>
+    </div>
+  </section>
 
-            <div class="form-group">
-              <label for="internship-option">Choose Internship</label>
-              <select class="form-control" id="internship-option" name="post" required>
-                <option value="">--Select Option--</option>
-                <option value="Teaching">Teaching</option>
-                <option value="Doctor">Doctor</option>
-                <option value="Counsellor">Counsellor</option>
-                <option value="Photography">Photography</option>
-                <option value="Public Relation">Public Relation</option>
-                <option value="Creative Department">Creative Department</option>
-              </select>
+  <!-- Internship Form -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="form-container" data-aos="fade-up">
+        <h2 class="text-center mb-4">Apply for Internship</h2>
+        
+        <form action="#" name="internshipform" id="internshipform" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" required 
+                   pattern="[A-Za-z A-Za-z]+" title="Name should contain only letters.">
+          </div>
+          
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" required
+                   pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9-]+\.[a-z]{2,3}">
+          </div>
+          
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" class="form-control" required
+                   maxlength="10" pattern="[0-9]{10}" title="Only 10 numbers allowed">
+          </div>
+          
+          <div class="form-group">
+            <label>Internship Field</label>
+            <select name="post" class="form-control" required>
+              <option value="">-- Select Option --</option>
+              <option value="Teaching">Teaching</option>
+              <option value="Doctor">Doctor</option>
+              <option value="Counsellor">Counsellor</option>
+              <option value="Photography">Photography</option>
+              <option value="Public Relation">Public Relation</option>
+              <option value="Creative Department">Creative Department</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Upload Resume (PDF)</label>
+            <div class="custom-file">
+              <input type="file" name="resume" class="custom-file-input" id="resume" required>
+              <label class="custom-file-label" for="resume">Choose file</label>
             </div>
-
-            <div class="form-group">
-              <label for="resume-btn"><i class="fa fa-upload " aria-hidden="true" style="color: #009970;"></i> Upload Your Resume (PDF)</label>
-              <input type="file" name="resume" id="resume-btn" class="form-control" style="overflow: hidden;" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" rows="3" name="message" placeholder="Write your message here..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-outline-success  mt-2 " name="submit">Submit</button>
-          </form>
-        </div>
-        <div class="col"></div>
+          </div>
+          
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" class="form-control" rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" name="submit" class="btn btn-block btn-warning font-weight-bold py-2">
+            Submit Application
+          </button>
+        </form>
       </div>
     </div>
   </section>
-  <!--intership form section end-->
 
-  <!--footer-->
-  <footer id="footer">
-    <div class="footer-top pb-4">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 footer-contact" style="height:200px">
-            <img src="./images/logo.jpg" height="85%">
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="footer-logo d-flex align-items-center mb-3">
+            <img src="./images/website-favicon.png" class="mr-3">
+            <h4 class="m-0">Bring Bright Smile</h4>
           </div>
-          <div class="col-lg-4 col-md-6 footer-contact" style="height: 200px">
-            <h3 style="color: #009970"><b>We For You</b></h3>
-            <p><a href="https://goo.gl/maps/KQ1NrWw3Bs63noTP9" target="_blank" style="color: #777777;">
-                Woodland Park, Block C<br>
-                Siddharth Nagar, Mulund West<br>
-                Mumbai, 400080</a><br><br>
-
-              <strong>Phone:</strong> <a href="tel:+919082689552" style="color: #777777;">+919082689552</a><br>
-
-              <strong>Email:</strong> <a href="mailto:neha71549@gmail.com" style="color: #777777;">weforyou@gmail.com</a><br>
-            </p>
-          </div>
-          <div class="col-lg-4 pt-4 mt-2">
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-              <a href="https://twitter.com/nehaa_2602_?t=ODUJLtg2wcFehM0gqk-E1w&s=08" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/Neha%20Gupta/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-              <a href="https://instagram.com/weforyou26?igshid=ZDdkNTZiNTM=" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCJs3CwS0-UIsYlDkw8TsO0g" class="google-plus" target="_blank"><i class="bx bxl-youtube"></i></a>
-              <a href="https://www.linkedin.com/in/mrrahul-rajpurohit-a71123222" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
+          <p class="text-muted">
+            Empowering underprivileged children through education, nutrition, and care.
+          </p>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fas fa-map-marker-alt mr-2"></i> Kankarbagh, Patna
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-phone mr-2"></i> +91 8969862809
+            </li>
+            <li>
+              <i class="fas fa-envelope mr-2"></i> info@bigsmile.in
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="./index.php">Home</a></li>
+            <li class="mb-2"><a href="./aboutus.php">About Us</a></li>
+            <li class="mb-2"><a href="./events.php">Events</a></li>
+            <li class="mb-2"><a href="./internship.php">Internship</a></li>
+            <li><a href="./vol.php">Volunteer</a></li>
+          </ul>
         </div>
       </div>
+      
+      <div class="text-center pt-3 border-top">
+        <p class="small text-muted mb-0">
+          &copy; 2023 Bring Bright Smile Foundation. All rights reserved.
+        </p>
+      </div>
     </div>
-
   </footer>
-  <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button><!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-  <!-- navbar animation -->
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <script>
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 60) {
-          $('.my-navbar').addClass('navbar-scroll');
-        } else {
-          $('.my-navbar').removeClass('navbar-scroll');
-        }
-      });
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Back to top button
+    window.addEventListener('scroll', function() {
+      var backToTop = document.getElementById('backToTop');
+      if (window.pageYOffset > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    
+    // File input label
+    $('.custom-file-input').on('change', function() {
+      let fileName = $(this).val().split('\\').pop();
+      $(this).next('.custom-file-label').addClass("selected").html(fileName);
     });
   </script>
-  <!--back to top btn-->
-  <script type="text/javascript">
-    myButton = document.getElementById("topbtn");
-    window.onscroll = function() {
-      scrollfunction()
-    };
-
-    function scrollfunction() {
-      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        myButton.style.display = "Block";
-      } else {
-        myButton.style.display = "none";
-      }
-    }
-
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-  <!--Animation on scroll (Aos) link and script-->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
 </body>
-
 </html>
 
 <?php
-
 if (isset($_POST['submit'])) {
-
   $filename = $_FILES["resume"]["name"];
   $tempname = $_FILES["resume"]["tmp_name"];
   $folder = "resume/" . $filename;
   move_uploaded_file($tempname, $folder);
 
-
   $name = $_POST['name'];
   $email = $_POST['email'];
   $phone = $_POST['phone'];
   $post = $_POST['post'];
-  $resume = $_FILES['resume'];
   $message = $_POST['message'];
 
   $host = 'localhost';
@@ -248,11 +348,11 @@ if (isset($_POST['submit'])) {
 
   $conn = mysqli_connect($host, $user, $pass, $dbname);
 
-  $sql = "INSERT INTO internship_form(name, email, phone, post, resume, message) values ('$name', '$email', '$phone', '$post', '$folder', '$message')";
+  $sql = "INSERT INTO internship_form(name, email, phone, post, resume, message) 
+          VALUES ('$name', '$email', '$phone', '$post', '$folder', '$message')";
 
   mysqli_query($conn, $sql);
 
-  echo '<script>alert("Your Form has been Submitted..")</script>';
+  echo '<script>alert("Your application has been submitted successfully!")</script>';
 }
-
 ?>

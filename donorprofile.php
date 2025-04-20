@@ -20,7 +20,11 @@ if (!isset($username)) {
     <title>MY PROFILE</title>
     <!-- Favicon-->
     <link rel="icon" type="image" href="./images/website-favicon.png" sizes="192x192" />
+    <!-- Font Awesome CDN (for version 5.x) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- custom add-ons for nav bar and footer -->
     <link rel="stylesheet" type="text/css" href="add.css">
@@ -39,7 +43,7 @@ if (!isset($username)) {
 <body>
     <div class="container-fluid menu">
         <nav class="navbar navbar-expand-lg my-navbar">
-            <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
+            <a class="navbar-brand " href="./donorpage.php"><img src="./images/website-favicon.png" height="150" width='150' alt="" loading="lazy"></a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,7 +74,7 @@ if (!isset($username)) {
         <div class="container py-4 my-4 bg-light" style="box-shadow: 2px 2px 2px 2px #777;">
             <?php
 
-            $conn = mysqli_connect("localhost", "root", "", "ngo");
+            $conn = mysqli_connect("localhost", "root", "root", "ngo");
             $username = $_SESSION['username'];
             $sql = "SELECT * FROM users where username= '$username'";
             $result = mysqli_query($conn, $sql);
@@ -86,7 +90,7 @@ if (!isset($username)) {
                         <div class="container" style="text-align:center">
                     <?php
                         if ($row['image'] == NULL) {
-                            echo "<h4><img src='..\Project\images\user.jpg' height='300px'; width='200px';></h4>";
+                            echo "<h4><img src='./images/user.png' height='300px'; width='200px';></h4>";
                         } else {
                             echo "<h4><img src='" . $row['image'] . "'height='300px'; width='200px';></h4>";
                         }
@@ -94,7 +98,7 @@ if (!isset($username)) {
                         echo "<h4 style='font-weight : bold';>Phone : " . $row['phone'] . "</h4>";
                         echo "<h4 style='font-weight : bold';>Email : " . $row['email'] . "</h4>";
                         echo "<h4 style='font-weight : bold';>Username : " . $row['username'] . "</h4>";
-                        //echo "<h4 style='font-weight : bold';>Password : ".$row['password']."</h4>";
+                        // echo "<h4 style='font-weight : bold';>Password : ".$row['password']."</h4>";
 
                     }
                 } else {

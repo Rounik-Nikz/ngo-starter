@@ -123,7 +123,7 @@
 
             <div class="reason">
                 For your generous donation to the <br />
-                Project Aahar Seva
+                Bring Bright Smile Foundation <br />
             </div>
 
             <!--div class="date">

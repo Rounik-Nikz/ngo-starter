@@ -39,7 +39,7 @@
     }
 
     body {
-      backgroud: white;
+      background: white;
     }
 
     @media only screen and (max-width: 992px) {
@@ -82,7 +82,7 @@
 <body>
   <div class="container-fluid menu">
     <nav class="navbar navbar-expand-lg my-navbar">
-      <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
+      <a class="navbar-brand " href="./donations.php"><img src="./images/website-favicon.png" height="150" width='150' alt="" loading="lazy"></a>
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -283,7 +283,7 @@
 
     function scrollfunction() {
       if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-        myButton.style.display = "Block";
+        myButton.style.display = "block";
       } else {
         myButton.style.display = "none";
       }

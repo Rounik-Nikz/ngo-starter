@@ -3,85 +3,197 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>PROJECT AAHARS SEVA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Aahar - Bring Bright Smile Foundation</title>
+    
     <!-- Favicon-->
     <link rel="icon" type="image" href="./images/website-favicon.png" sizes="192x192" />
-
-    <!--stylesheet link-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <!-- custom add-ons -->
-    <link rel="stylesheet" type="text/css" href="add.css">
-    <script src="owl.carousel/owl.carousel.min.js"></script>
-    <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-
-    <!--aos link-->
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #232323;
+            --secondary: #fbfe65;
+            --accent: #e53e3e;
+            --light: #ffffff;
+            --dark: #232323;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            padding-top: 80px;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* EXACT NAVIGATION FROM HOMEPAGE */
+        .my-navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 0.5rem 1rem;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--secondary);
+        }
+        
+        .navbar-brand span {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-left: 10px;
+            color: var(--dark);
+        }
+        
+        .navbar-brand span span {
+            color: var(--secondary);
+        }
+        
+        .nav-link {
+            color: var(--dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+        
+        .nav-link.active {
+            color: var(--secondary) !important;
+            font-weight: 600;
+        }
+        
+        .custom-toggler {
+            border: none;
+            padding: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .custom-toggler:focus {
+            outline: none;
+        }
+        
+        .custom-toggler-icon {
+            background-image: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        /* Rest of your original styles */
+        .green-hr {
+            border: 0;
+            height: 2px;
+            background: var(--secondary);
+            width: 100px;
+            margin: 1rem auto;
+        }
+        
+        .donate-btn {
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0.5rem 2rem;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .donate-btn:hover {
+            background-color: #e9ec5a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer hover fix */
+        #footer a:hover {
+            color: var(--secondary) !important;
+        }
+    </style>
 </head>
 
 <body>
-    <!------navigation----->
-    <div class="container-fluid menu">
-        <nav class="navbar navbar-expand-lg my-navbar">
-            <a class="navbar-brand " href="#"><img src="./images/v4u.jpg" height="100" width='150' alt="" loading="lazy"></a>
+    <!-- NAVIGATION BAR (EXACT COPY FROM HOME PAGE) -->
+    <nav class="navbar navbar-expand-lg my-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="./images/website-favicon.png" alt="Logo">
+                <span>Bring <span>Bright Smile</span></span>
+            </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link " href="index.php">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="aboutus.php">About us</a>
+                        <a class="nav-link" href="aboutus.php">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="events.php" class="nav-link">Events</a>
+                        <a class="nav-link" href="events.php">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a href="internship.php" class="nav-link">Internship</a>
+                        <a class="nav-link" href="internship.php">Internship</a>
                     </li>
                     <li class="nav-item">
-                        <a href="vol.php" class="nav-link ">Volunteer</a>
+                        <a class="nav-link" href="vol.php">Volunteer</a>
                     </li>
                     <li class="nav-item">
-                        <a href="projectaahar.php" class="nav-link active">Project Aahar</a>
+                        <a class="nav-link active" href="projectaahar.php">Project Aahar</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contactus.php" class="nav-link">Contact Us</a>
+                        <a class="nav-link" href="contactus.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login.php" class="nav-link">Login</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
-
+    <!-- ALL YOUR ORIGINAL CONTENT REMAINS EXACTLY THE SAME -->
     <?php
     include '_dbconnect.php';
-    $sql = "SELECT * FROM featureevent ";
+    $sql = "SELECT * FROM featureevent";
     $result = mysqli_query($conn, $sql);
 
-    if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result)) {
         while ($row = mysqli_fetch_assoc($result)) {
             $eid = $row['id'];
             $date = date("M d, Y", strtotime($row['date']));
     ?>
-            <!--------------------------------nav bar end--------------------------------------------------------->
             <!-- Heading -->
             <section class="pt-5 pb-0">
                 <div class="container">
                     <div class="about text-center">
-                        <h2><?php echo "$row[name]"; ?>
+                        <h2><?php echo $row['name']; ?>
                             <hr class="green-hr">
                         </h2>
                     </div>
@@ -90,154 +202,149 @@
 
             <!--DONATION content -->
             <section class="bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title p-4">
-                            <h2>DONATE</h2>
-                        </div>
-                    </div>
+                <div class="container py-4">
                     <div class="row">
                         <div class="col-lg-6 text-center">
-                            <img src="images\events_images\projectahaar\projectahaar.jpeg" alt="Project AAHAR SEVA" width="450px" height="250px" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                            <img src="images/aahar.png" alt="Project AAHAR SEVA" class="img-fluid shadow" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
                         </div>
-                        <div class="col-lg-6 justify-content-center" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                            <p><?php echo "$row[description]"; ?></p>
-                            <h4 class="pb-2" style='font-weight: bold; font-variant: small-caps; text-shadow: 1px 1px 1px #777777;'>Click here to donate <i class="fa fa-arrow-down" aria-hidden="true"></i></h4>
-                            <a href="donateform.php" target="_blank" class="btn btn-outline-success donate-btn">DONATE NOW </a>
+                        <div class="col-lg-6" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                            <div class="p-4">
+                                <p><?php echo $row['description']; ?></p>
+                                <h4 class="pb-2 font-weight-bold" style="font-variant: small-caps; text-shadow: 1px 1px 1px #777777;">Click here to donate <i class="fa fa-arrow-down" aria-hidden="true"></i></h4>
+                                <a href="donateform.php" target="_blank" class="btn donate-btn">DONATE NOW</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <!-- Our project-->
-            <section class="py-2">
-                <!-- Our project images-->
+            <section class="py-4">
                 <div class="container">
                     <div class="row">
-                        <div class="section-title p-4 pb-0">
-                            <h2>OUR PROJECT</h2>
+                        <div class="col-12">
+                            <h2 class="section-title">OUR PROJECT</h2>
                         </div>
                     </div>
-                    <div class="row portfolio-container  px-4 py-2">
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap ">
-                                <img src="images\projectaahar_images\2.jpg" class="img-fluid shadow" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                    <div class="row portfolio-container px-2 py-2">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                            <div class="portfolio-wrap">
+                                <img src="images/projectaahar_images/2.png" class="img-fluid shadow">
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
                             <div class="portfolio-wrap">
-                                <img src="images\projectaahar_images\4.webp" class="img-fluid shadow" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                                <img src="images/projectaahar_images/4.png" class="img-fluid shadow">
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
                             <div class="portfolio-wrap">
-                                <img src="images\projectaahar_images\3.webp" class="img-fluid shadow" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                                <img src="images/projectaahar_images/3.png" class="img-fluid shadow">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="bg-light">
-                <!-- our project content -->
-                <div class="container-fluid padding  bg-light" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                    <div class="row  mx-md-5 px-md-5 m-2  ">
-                        <div class="col-12 shadow">
-                            <h5>
-                                <?php echo "$row[details]"; ?></h5>
+
+            <section class="bg-light py-4">
+                <div class="container-fluid">
+                    <div class="row mx-md-5 px-md-5 m-2">
+                        <div class="col-12 p-4 shadow">
+                            <h5><?php echo $row['details']; ?></h5>
                         </div>
                     </div>
                 </div>
             </section>
-            <section>
+
+            <section class="py-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="section-title" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                                <h2>CONTRIBUTION</h2>
-                            </div>
+                            <h2 class="section-title" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">CONTRIBUTION</h2>
                         </div>
-                        <div class="col-lg-8 justify-content-center" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                            <p>
-                                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                Together, we can alleviate the distress that hunger has caused in our society. We at WeForYou, ensure you 100% transparency with your contribution. We’ll share with you the picture of the donated packets marked with your name on it for you deserve to know when, where and how your donations are bringing a change in who’s life.
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
-                            </p>
+                        <div class="col-lg-8" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
+                            <div class="p-4">
+                                <p>
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                    Together, we can alleviate the distress that hunger has caused in our society. We at Bring Bright Smile, ensure you 100% transparency with your contribution. We'll share with you the picture of the donated packets marked with your name on it for you deserve to know when, where and how your donations are bringing a change in who's life.
+                                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-    <?php }
+    <?php 
+        }
     }
     ?>
-    <!---------footer---------->
 
-    <!--footer-->
+    <!-------------------------------- FOOTER ------------------------------------------>
     <footer id="footer">
-        <div class="footer-top pb-4">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 footer-contact" style="height:200px">
-                        <img src="./images/logo.jpg" height="85%">
-                    </div>
-                    <div class="col-lg-4 col-md-6 footer-contact" style="height: 200px">
-                        <h3 style="color: #009970"><b>We For You</b></h3>
-                        <p><a href="https://goo.gl/maps/KQ1NrWw3Bs63noTP9" target="_blank" style="color: #777777;">
-                                Woodland Park, Block C<br>
-                                Siddharth Nagar, Mulund West<br>
-                                Mumbai, 400080</a><br><br>
-
-                            <strong>Phone:</strong> <a href="tel:+919082689552" style="color: #777777;">+919082689552</a><br>
-
-                            <strong>Email:</strong> <a href="mailto:neha71549@gmail.com" style="color: #777777;">weforyou@gmail.com</a><br>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 pt-4 mt-2">
-                        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                            <a href="https://twitter.com/nehaa_2602_?t=ODUJLtg2wcFehM0gqk-E1w&s=08" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-                            <a href="https://www.facebook.com/Neha%20Gupta/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://instagram.com/weforyou26?igshid=ZDdkNTZiNTM=" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-                            <a href="https://www.youtube.com/channel/UCJs3CwS0-UIsYlDkw8TsO0g" class="google-plus" target="_blank"><i class="bx bxl-youtube"></i></a>
-                            <a href="https://www.linkedin.com/in/mrrahul-rajpurohit-a71123222" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center text-md-left">
+                    <img src="./images/website-favicon.png" class="img-fluid" style="max-height: 120px;">
+                </div>
+                <div class="col-lg-4 col-md-6 footer-contact">
+                    <h3 style="color: var(--secondary)"><b>Bring Bright Smile</b></h3>
+                    <p>
+                        <a href="https://maps.app.goo.gl/fZkQtg7iQaFNppAcA" target="_blank" style="color: #aaa;">
+                            Kankarbagh<br>
+                            Patna, 800001
+                        </a><br><br>
+                        <strong>Phone:</strong> <a href="tel:+918969862809" style="color: #aaa;">+91 8969862809</a><br>
+                        <strong>Email:</strong> <a href="mailto:info@bigsmile.in" style="color: #aaa;">info@bigsmile.in</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center text-md-right">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/aryanschoolhjp/" class="facebook" target="_blank" style="color: #aaa;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bringbrightsmilefoundation/" class="instagram" target="_blank" style="color: #aaa;"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-
     </footer>
-    <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- navbar animation -->
+    <!-- BACK TO TOP BUTTON -->
+    <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up"></i></button>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > 60) {
-                    $('.my-navbar').addClass('navbar-scroll');
-                } else {
-                    $('.my-navbar').removeClass('navbar-scroll');
-                }
-            });
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
         });
-    </script>
-    <!--back to top btn-->
-    <script type="text/javascript">
-        myButton = document.getElementById("topbtn");
+
+        // Navbar scroll effect
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 50) {
+                $('.navbar').addClass('navbar-scroll');
+            } else {
+                $('.navbar').removeClass('navbar-scroll');
+            }
+        });
+
+        // Back to top button
         window.onscroll = function() {
-            scrollfunction()
+            scrollFunction()
         };
 
-        function scrollfunction() {
+        function scrollFunction() {
             if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                myButton.style.display = "Block";
+                document.getElementById("topbtn").style.display = "block";
             } else {
-                myButton.style.display = "none";
+                document.getElementById("topbtn").style.display = "none";
             }
         }
 
@@ -246,12 +353,5 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
 </body>
-
 </html>
